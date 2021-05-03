@@ -1,5 +1,6 @@
 :root {
   --card-set-gap: 30px;
+  --card-set-gap-two: 50px;
   --primary-text-color: rgba(33, 33, 33, 1);
   --secondary-text-color: rgba(117, 117, 117, 1);
   --accent-color: rgba(33, 150, 243, 1);
@@ -201,16 +202,11 @@ img {
   background-color: var(--accent-color-btn);
 }
 /* Особености*/
-.feature-list-icon {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 30px;
-}
 .feature-items-icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 270px;
+  width: 100%;
   height: 120px;
   background-color: var(--background-color);
   border-radius: 4px;
@@ -227,6 +223,7 @@ img {
   flex-basis: calc(100% / 4 - var(--card-set-gap));
 }
 .feature-title {
+  margin-top: 30px;
   margin-bottom: 10px;
 }
 .feature-text {
@@ -291,7 +288,9 @@ img {
 }
 .social-list {
   display: flex;
-  justify-content: space-between;
+}
+.social-list-item:not(:last-child) {
+  margin-right: 10px;
 }
 .social-list-link {
   display: flex;
@@ -316,21 +315,23 @@ img {
   padding-top: 100px;
   padding-bottom: 88px;
 }
-.cliets-list {
+.clients-list {
   display: flex;
   flex-wrap: wrap;
   margin-left: calc(-1 * var(--card-set-gap));
-  margin-top: calc(-1 * var(--card-set-gap));
+  margin-top: calc(-1 * var(--card-set-gap-two));
+}
+.clients-list-item {
+  display: flex;
+  margin-left: var(--card-set-gap);
+  margin-top: var(--card-set-gap-two);
+  flex-basis: calc(100% / 6 - var(--card-set-gap));
 }
 .clients-list-item-link {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: var(--card-set-gap);
-  margin-top: var(--card-set-gap);
-  flex-basis: calc(100% / 6 - var(--card-set-gap));
-
-  width: 170px;
+  width: 100%;
   height: 92px;
   border: 1px solid var(--icon-color);
   border-radius: 4px;
@@ -392,7 +393,6 @@ img {
 }
 .portfolio-title {
   margin-bottom: 4px;
-  margin-left: 24px;
 
   color: var(--primary-text-color);
   font-size: 18px;
@@ -402,18 +402,17 @@ img {
 .portfolio-project {
   margin-top: 0;
   margin-bottom: 0;
-  margin-left: 24px;
 
   color: var(--secondary-text-color);
   font-size: 16px;
   line-height: 1.87;
 }
 .portfolio-subtitle {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding: 20px 24px;
 
   border: 1px solid var(--border-color);
 }
+.portfolio-list-item:focus-within,
 .portfolio-list-item:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
